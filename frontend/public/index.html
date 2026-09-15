@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     
     <!-- SDK oficial de Supabase para la base de datos pública en la nube -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
     
     <style>
         :root {
@@ -1632,10 +1632,10 @@
                 
                 <div class="airport-counter-wrapper">
                     <div class="airport-counter-board">
-                        <div class="flap-digit" id="digit1"><img src="./img/0.png" class="flap-digit-img" alt="0"></div>
-                        <div class="flap-digit" id="digit2"><img src="./img/0.png" class="flap-digit-img" alt="0"></div>
-                        <div class="flap-digit" id="digit3"><img src="./img/0.png" class="flap-digit-img" alt="0"></div>
-                        <img src="./img/B TEXTO ANOS.png" class="doodle-texto-anos" alt="años" />
+                        <div class="flap-digit" id="digit1"></div>
+                        <div class="flap-digit" id="digit2"></div>
+                        <div class="flap-digit" id="digit3"></div>
+                        <img src="./img/B TEXTO ANOS.png" class="doodle-texto-anos" alt="años" onerror="this.src='./img/TEXTO ANOS.png'" />
                     </div>
                 </div>
 
@@ -1712,20 +1712,20 @@
                 </div>
             </div>
 
-            <img src="./img/B FLOR NO ME.png" class="doodle-petals" alt="Pétalos no me olvides">
+            <img src="./img/B FLOR NO ME.png" class="doodle-petals" alt="Pétalos no me olvides" loading="lazy">
         </section>
 
         <!-- CONTEXTO MANDATO (2 CUADROS DESPUÉS DEL ABECÉ) -->
         <section class="section contexto-section" id="contextoSection">
             <div class="contexto-left">
-                <img src="./img/B TEXTO POR QUE.png" class="doodle-texto-mandato" alt="Texto por qué" />
+                <img src="./img/B TEXTO POR QUE.png" class="doodle-texto-mandato" alt="Texto por qué" onerror="this.src='./img/TEXTO POR QUE.png'" />
                 <p class="contexto-box-desc">
                     Nació en el marco del Punto 1 del Acuerdo Final de Paz (2016) y se rige bajo el Decreto Ley 589 de 2017. Es un mecanismo estatal, humanitario y extrajudicial creado para responder al reclamo histórico de las víctimas, aliviar la incertidumbre y buscar la verdad sin juzgar responsabilidades.
                 </p>
             </div>
 
             <div class="contexto-right">
-                <img src="./img/B TEXTO HASTA.png" class="doodle-texto-contexto" alt="Texto hasta diciembre" />
+                <img src="./img/B TEXTO HASTA.png" class="doodle-texto-contexto" alt="Texto hasta diciembre" onerror="this.src='./img/TEXTO HASTA.png'" />
                 <p class="contexto-box-desc">
                     La ley estableció que la UBPD acompaña y coordina la búsqueda de todas las personas desaparecidas durante el conflicto armado colombiano antes del Acuerdo Final de Paz.
                 </p>
@@ -1735,14 +1735,14 @@
         <!-- 4. HISTORIAS QUE SANAN - YOUTUBE EMBEDS CON PROTECCIÓN REFERRER -->
         <section class="historias-section" id="historiasSection">
             <div class="historias-header">
-                <img src="./img/TEXTO_HISTORIAS.png" class="doodle-texto-historias" alt="Historias que sanan">
+                <img src="./img/TEXTO_HISTORIAS.png" class="doodle-texto-historias" alt="Historias que sanan" onerror="this.src='./img/B TEXTO_HISTORIAS.png'">
                 <p class="historias-sub">Acompáñanos a escuchar estos relatos de memoria, resiliencia y esperanza.</p>
             </div>
 
             <div class="historias-grid-container">
                 <!-- FILMINUTO 1 -->
                 <div class="story-card-item">
-                    <img src="./img/NOMBRE MARIELA.png" class="doodle-nombre-mariela" alt="mariela" />
+                    <img src="./img/NOMBRE MARIELA.png" class="doodle-nombre-mariela" alt="mariela" onerror="this.src='./img/NOMBRE MARIELA.PNG'">
                     <p class="video-summary-desc">Mariela y el alivio de haber encontrado por fin a su hija Yerlin.</p>
                     <div class="frame-wrapper">
                         <iframe class="frame-iframe" 
@@ -1752,13 +1752,13 @@
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                 allowfullscreen>
                         </iframe>
-                        <img src="./img/MARCO VIDEOS 1.png" class="frame-img-overlay" alt="Marco 1">
+                        <img src="./img/MARCO VIDEOS 1.png" class="frame-img-overlay" alt="Marco 1" loading="lazy">
                     </div>
                 </div>
 
                 <!-- FILMINUTO 2 -->
                 <div class="story-card-item">
-                    <img src="./img/NOMBRE YARIS.png" class="doodle-nombre-yaris" alt="yaris" />
+                    <img src="./img/NOMBRE YARIS.png" class="doodle-nombre-yaris" alt="yaris" onerror="this.src='./img/NOMBRE YARIS.PNG'">
                     <p class="video-summary-desc">Yaris vuelve a encontrarse con su mamá.</p>
                     <div class="frame-wrapper">
                         <iframe class="frame-iframe" 
@@ -1768,13 +1768,13 @@
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                 allowfullscreen>
                         </iframe>
-                        <img src="./img/MARCO VIDEOS 2.png" class="frame-img-overlay" alt="Marco 2">
+                        <img src="./img/MARCO VIDEOS 2.png" class="frame-img-overlay" alt="Marco 2" loading="lazy">
                     </div>
                 </div>
 
                 <!-- FILMINUTO 3 -->
                 <div class="story-card-item">
-                    <img src="./img/NOMBRE YANIRE.png" class="doodle-nombre-yanire" alt="yanire" />
+                    <img src="./img/NOMBRE YANIRE.png" class="doodle-nombre-yanire" alt="yanire" onerror="this.src='./img/NOMBRE YANIRE.PNG'">
                     <p class="video-summary-desc">Yanire nos comparte la paz de tener de regreso a sus dos hermanos.</p>
                     <div class="frame-wrapper">
                         <iframe class="frame-iframe" 
@@ -1784,7 +1784,7 @@
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                 allowfullscreen>
                         </iframe>
-                        <img src="./img/MARCO VIDEOS 3.png" class="frame-img-overlay" alt="Marco 3">
+                        <img src="./img/MARCO VIDEOS 3.png" class="frame-img-overlay" alt="Marco 3" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -1792,11 +1792,11 @@
 
         <!-- 5. PAUSA CONSCIENTE SECTION -->
         <section class="section pausa-section" id="pausaSection">
-            <img src="./img/B FLORES TRES.png" class="doodle doodle-daisies" alt="Flores decorativas">
+            <img src="./img/B FLORES TRES.png" class="doodle doodle-daisies" alt="Flores decorativas" loading="lazy">
 
             <div class="pausa-container">
                 <div class="pausa-text-col">
-                    <img src="./img/B TEXTO_PAUSA.png" class="doodle-texto-pausa" alt="Pausa Consciente">
+                    <img src="./img/B TEXTO_PAUSA.png" class="doodle-texto-pausa" alt="Pausa Consciente" onerror="this.src='./img/TEXTO_PAUSA.png'">
                     <p class="pausa-description">Respira profundo. Inhala para tomar fuerzas; exhala para soltar el peso de la espera. Un instante para ti.</p>
                 </div>
 
@@ -1846,7 +1846,7 @@
 
                 <!-- IMAGEN DE LA MANO UBICADA DEBAJO DE LOS MENSAJES -->
                 <div class="muro-hand-bottom-wrapper">
-                    <img src="./img/B MANO ES 1.png" class="doodle-hand-pencil" alt="Mano escribiendo" onerror="this.src='./img/MANO ES 1.png'">
+                    <img src="./img/B MANO ES 1.png" class="doodle-hand-pencil" alt="Mano escribiendo" onerror="this.src='./img/MANO ES 1.png'" loading="lazy">
                 </div>
 
             </div>
@@ -1855,10 +1855,10 @@
         <!-- 7. RUTA DE REPORTE SECTION -->
         <section class="section ruta-section" id="rutaSection">
             <div class="ruta-container">
-                <img src="./img/FLOR PENSA.png" class="doodle doodle-pansies" alt="Pensamientos">
+                <img src="./img/FLOR PENSA.png" class="doodle doodle-pansies" alt="Pensamientos" loading="lazy">
 
                 <div class="ruta-content">
-                    <img src="./img/TEXTO_RUTA.png" class="doodle-texto-ruta" alt="Ruta de reporte" onerror="this.outerHTML='<h2 class=\'caveat-title ruta-title\'>Ruta de reporte</h2>'">
+                    <img src="./img/TEXTO_RUTA.png" class="doodle-texto-ruta" alt="Ruta de reporte" onerror="this.src='./img/B TEXTO_RUTA.png'">
 
                     <p class="ruta-description">
                         Si buscas a alguien o recuerdas algún dato que pueda ayudar a una familia, aquí estamos para escucharte con total confianza.
@@ -1877,7 +1877,7 @@
         <footer class="lineas-footer-section" id="lineasSection">
             <div class="lineas-container">
                 <div class="lineas-info-col">
-                    <img src="./img/B TEXTO_LINEAS.png" class="doodle-texto-lineas" alt="Líneas de atención" onerror="this.outerHTML='<h2 class=\'caveat-title ruta-title\'>Líneas de atención</h2>'">
+                    <img src="./img/B TEXTO_LINEAS.png" class="doodle-texto-lineas" alt="Líneas de atención" onerror="this.src='./img/TEXTO_LINEAS.png'">
                     
                     <p class="lineas-subtitle">Canales oficiales de atención:</p>
                     
@@ -1890,22 +1890,22 @@
 
                     <div class="social-links-wrapper">
                         <a href="https://www.youtube.com/@ubpdcolombia" target="_blank" rel="noopener noreferrer" aria-label="YouTube UBPD">
-                            <img src="./img/BOTON REDES YT.png" class="btn-social-icon icon-youtube" alt="YouTube">
+                            <img src="./img/BOTON REDES YT.png" class="btn-social-icon icon-youtube" alt="YouTube" loading="lazy">
                         </a>
                         <a href="https://x.com/UBPDcolombia" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) UBPD">
-                            <img src="./img/BOTON REDES X.png" class="btn-social-icon icon-x" alt="X">
+                            <img src="./img/BOTON REDES X.png" class="btn-social-icon icon-x" alt="X" loading="lazy">
                         </a>
                         <a href="https://www.instagram.com/ubpdcolombia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram UBPD">
-                            <img src="./img/BOTON REDES INST.png" class="btn-social-icon icon-instagram" alt="Instagram">
+                            <img src="./img/BOTON REDES INST.png" class="btn-social-icon icon-instagram" alt="Instagram" loading="lazy">
                         </a>
                         <a href="https://www.facebook.com/UBPDcolombia/" target="_blank" rel="noopener noreferrer" aria-label="Facebook UBPD">
-                            <img src="./img/BOTON REDES FB.png" class="btn-social-icon icon-facebook" alt="Facebook">
+                            <img src="./img/BOTON REDES FB.png" class="btn-social-icon icon-facebook" alt="Facebook" loading="lazy">
                         </a>
                     </div>
                 </div>
 
                 <div class="lineas-logo-col">
-                    <img src="./img/LOGO UBPD VERTICAL BLANCO.png" class="logo-ubpd-footer" alt="Logo UBPD Colombia">
+                    <img src="./img/LOGO UBPD VERTICAL BLANCO.png" class="logo-ubpd-footer" alt="Logo UBPD Colombia" loading="lazy">
                 </div>
             </div>
         </footer>
@@ -2016,21 +2016,40 @@
                 document.body.style.backgroundPositionY = -(scrolled * 0.12) + 'px';
             });
 
-            // --- ANIMACIÓN CONTADOR TIPO AEROPUERTO CON IMÁGENES DIBUJADAS ---
+            // --- ANIMACIÓN CONTADOR CON IMÁGENES DIBUJADAS Y FALLBACK INTELIGENTE ---
             const targetNumber = 375; 
-            const digit1Img = document.querySelector('#digit1 .flap-digit-img');
-            const digit2Img = document.querySelector('#digit2 .flap-digit-img');
-            const digit3Img = document.querySelector('#digit3 .flap-digit-img');
-
             let currentVal = 0;
             let timer = null;
 
             function updateFlaps(num) {
                 const formatted = String(num).padStart(3, '0');
-                if (digit1Img) digit1Img.src = `./img/${formatted[0]}.PNG`;
-                if (digit2Img) digit2Img.src = `./img/${formatted[1]}.PNG`;
-                if (digit3Img) digit3Img.src = `./img/${formatted[2]}.PNG`;
+                
+                [1, 2, 3].forEach((index, i) => {
+                    const digitContainer = document.getElementById(`digit${index}`);
+                    if (digitContainer) {
+                        const digitChar = formatted[i];
+                        
+                        let img = digitContainer.querySelector('.flap-digit-img');
+                        if (!img) {
+                            img = document.createElement('img');
+                            img.className = 'flap-digit-img';
+                            digitContainer.appendChild(img);
+                        }
+                        
+                        // Intenta primero .png y si falla intenta con .PNG
+                        img.onerror = function() {
+                            if (this.src.endsWith('.png')) {
+                                this.src = `./img/${digitChar}.PNG`;
+                            }
+                        };
+                        img.src = `./img/${digitChar}.png`;
+                        img.alt = digitChar;
+                    }
+                });
             }
+
+            // Inicializa las aletas con 000
+            updateFlaps(0);
 
             const statsSection = document.querySelector('.stats-section');
             if (statsSection) {
