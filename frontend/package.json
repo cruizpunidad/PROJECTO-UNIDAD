@@ -1,0 +1,12 @@
+{
+  "name": "ubpd-frontend",
+  "version": "1.0.0",
+  "description": "Servidor de desarrollo Node para HTML Vainilla de la UBPD",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
