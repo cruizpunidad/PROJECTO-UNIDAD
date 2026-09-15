@@ -737,7 +737,7 @@
         }
 
         /* ==========================================
-           4. HISTORIAS QUE SANAN - CONTROLES Y VIDEO
+           4. HISTORIAS QUE SANAN - YOUTUBE EMBEDS CON PROTECCIÓN REFERRER
            ========================================== */
         .historias-section {
             position: relative;
@@ -827,7 +827,7 @@
             pointer-events: none;
         }
 
-        .frame-video {
+        .frame-iframe {
             position: absolute;
             top: 3.8%;
             bottom: 3.8%;
@@ -835,77 +835,12 @@
             right: 6.5%;
             width: 87%;
             height: 92.4%;
-            object-fit: cover;
-            z-index: 1;
-            border-radius: 4px;
-            background-color: #f0f0f0;
-            cursor: pointer;
-        }
-
-        /* BOTÓN PLAY CENTRAL */
-        .btn-center-play {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-            background: rgba(255, 255, 255, 0.9);
             border: none;
-            color: var(--purple-text);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease, opacity 0.3s ease;
-            outline: none;
+            border-radius: 4px;
+            z-index: 1;
+            background-color: #000;
         }
 
-        .btn-center-play:hover {
-            transform: translate(-50%, -50%) scale(1.12);
-            background: #ffffff;
-        }
-
-        .btn-center-play.playing {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .frame-wrapper:hover .btn-center-play.playing {
-            opacity: 0.8;
-            pointer-events: auto;
-        }
-
-        .icon-play-center {
-            font-size: 1.5rem;
-            line-height: 1;
-            margin-left: 3px;
-        }
-
-        /* BARRA DE PROGRESO DE VIDEO */
-        .video-progress-container {
-            position: absolute;
-            bottom: 22px;
-            left: 8%;
-            right: 8%;
-            height: 6px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 3px;
-            z-index: 10;
-            cursor: pointer;
-            overflow: hidden;
-        }
-
-        .video-progress-bar {
-            width: 0%;
-            height: 100%;
-            background: var(--mint-green);
-            border-radius: 3px;
-            transition: width 0.1s linear;   
-        }
         .doodle-nombre-yaris {
             width: 100%;
             max-width: 120px;
@@ -1797,7 +1732,7 @@
             </div>
         </section>
 
-        <!-- 4. HISTORIAS QUE SANAN -->
+        <!-- 4. HISTORIAS QUE SANAN - YOUTUBE EMBEDS CON PROTECCIÓN REFERRER -->
         <section class="historias-section" id="historiasSection">
             <div class="historias-header">
                 <img src="./img/TEXTO_HISTORIAS.png" class="doodle-texto-historias" alt="Historias que sanan">
@@ -1810,18 +1745,14 @@
                     <img src="./img/NOMBRE MARIELA.png" class="doodle-nombre-mariela" alt="mariela" />
                     <p class="video-summary-desc">Mariela y el alivio de haber encontrado por fin a su hija Yerlin.</p>
                     <div class="frame-wrapper">
-                        <video class="frame-video" loop muted playsinline preload="metadata" poster="./img/POSTER_FILMINUTO1.jpg">
-                            <source src="./videos/FILMINUTO1.mp4" type="video/mp4">
-                        </video>
+                        <iframe class="frame-iframe" 
+                                src="https://www.youtube.com/embed/48r_tR9pFYI?rel=0&modestbranding=1" 
+                                title="Mariela - Filminuto 1" 
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
                         <img src="./img/MARCO VIDEOS 1.png" class="frame-img-overlay" alt="Marco 1">
-                        
-                        <button class="btn-center-play" aria-label="Reproducir o pausar">
-                            <span class="icon-play-center">▶</span>
-                        </button>
-
-                        <div class="video-progress-container">
-                            <div class="video-progress-bar"></div>
-                        </div>
                     </div>
                 </div>
 
@@ -1830,38 +1761,30 @@
                     <img src="./img/NOMBRE YARIS.png" class="doodle-nombre-yaris" alt="yaris" />
                     <p class="video-summary-desc">Yaris vuelve a encontrarse con su mamá.</p>
                     <div class="frame-wrapper">
-                        <video class="frame-video" loop muted playsinline preload="metadata" poster="./img/POSTER_FILMINUTO2.jpg">
-                            <source src="./videos/FILMINUTO2.mp4" type="video/mp4">
-                        </video>
+                        <iframe class="frame-iframe" 
+                                src="https://www.youtube.com/embed/yQvfnVcG8UA?rel=0&modestbranding=1" 
+                                title="Yaris - Filminuto 2" 
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
                         <img src="./img/MARCO VIDEOS 2.png" class="frame-img-overlay" alt="Marco 2">
-                        
-                        <button class="btn-center-play" aria-label="Reproducir o pausar">
-                            <span class="icon-play-center">▶</span>
-                        </button>
-
-                        <div class="video-progress-container">
-                            <div class="video-progress-bar"></div>
-                        </div>
                     </div>
                 </div>
 
                 <!-- FILMINUTO 3 -->
                 <div class="story-card-item">
-                     <img src="./img/NOMBRE YANIRE.png" class="doodle-nombre-yanire" alt="yanire" />
+                    <img src="./img/NOMBRE YANIRE.png" class="doodle-nombre-yanire" alt="yanire" />
                     <p class="video-summary-desc">Yanire nos comparte la paz de tener de regreso a sus dos hermanos.</p>
                     <div class="frame-wrapper">
-                        <video class="frame-video" loop muted playsinline preload="metadata" poster="./img/POSTER_FILMINUTO3.jpg">
-                            <source src="./videos/FILMINUTO3.mp4" type="video/mp4">
-                        </video>
+                        <iframe class="frame-iframe" 
+                                src="https://www.youtube.com/embed/KumTnB3BVrU?rel=0&modestbranding=1" 
+                                title="Yanire - Filminuto 3" 
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
                         <img src="./img/MARCO VIDEOS 3.png" class="frame-img-overlay" alt="Marco 3">
-                        
-                        <button class="btn-center-play" aria-label="Reproducir o pausar">
-                            <span class="icon-play-center">▶</span>
-                        </button>
-
-                        <div class="video-progress-container">
-                            <div class="video-progress-bar"></div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -2029,9 +1952,9 @@
             const btnToggle = document.getElementById('btnToggleStory');
             const scrollImageWrapper = document.getElementById('scrollImageWrapper');
 
-            const tiempoLecturaBienvenida = 9500; // 9.5s para leer la bienvenida
-            const tiempoLecturaRelatoLimpio = 10000; // 10s extra para leer el relato sin puntos ni comas
-            const tiempoEntrePuntos = 400; // ms entre cada punto/coma
+            const tiempoLecturaBienvenida = 9500; 
+            const tiempoLecturaRelatoLimpio = 10000; 
+            const tiempoEntrePuntos = 400; 
 
             if (introParagraph) {
                 const words = introParagraph.innerText.trim().split(' ');
@@ -2136,58 +2059,6 @@
 
                 observer.observe(statsSection);
             }
-
-            // --- 3. HISTORIAS VIDEOS (PLAY CENTRAL CON AUDIO Y BARRA DE PROGRESO) ---
-            const frameWrappers = document.querySelectorAll('.frame-wrapper');
-
-            frameWrappers.forEach(wrapper => {
-                const video = wrapper.querySelector('.frame-video');
-                const btnCenterPlay = wrapper.querySelector('.btn-center-play');
-                const iconCenterPlay = wrapper.querySelector('.icon-play-center');
-                const progressBar = wrapper.querySelector('.video-progress-bar');
-                const progressContainer = wrapper.querySelector('.video-progress-container');
-
-                if (video && btnCenterPlay) {
-                    const togglePlay = (e) => {
-                        e.stopPropagation();
-                        if (video.paused) {
-                            video.muted = false; // Activa el audio desde la primera reproducción
-                            video.play();
-                            iconCenterPlay.innerText = '❚❚';
-                            btnCenterPlay.classList.add('playing');
-                        } else {
-                            video.pause();
-                            iconCenterPlay.innerText = '▶';
-                            btnCenterPlay.classList.remove('playing');
-                        }
-                    };
-
-                    btnCenterPlay.addEventListener('click', togglePlay);
-                    video.addEventListener('click', togglePlay);
-
-                    video.addEventListener('timeupdate', () => {
-                        if (video.duration) {
-                            const percentage = (video.currentTime / video.duration) * 100;
-                            if (progressBar) progressBar.style.width = percentage + '%';
-                        }
-                    });
-
-                    if (progressContainer) {
-                        progressContainer.addEventListener('click', (e) => {
-                            e.stopPropagation();
-                            const rect = progressContainer.getBoundingClientRect();
-                            const pos = (e.clientX - rect.left) / rect.width;
-                            video.currentTime = pos * video.duration;
-                        });
-                    }
-
-                    video.addEventListener('ended', () => {
-                        iconCenterPlay.innerText = '▶';
-                        btnCenterPlay.classList.remove('playing');
-                        if (progressBar) progressBar.style.width = '0%';
-                    });
-                }
-            });
 
             // --- 6. MURO DE REFLEXIÓN & MODERACIÓN DE POST-ITS ---
             const SUPABASE_URL = 'TU_SUPABASE_URL_AQUI';
